@@ -8,6 +8,7 @@
 .app_body{
   display: flex;
   background-color: rgb(81, 110, 107);
+  border-radius: 1%;
   margin-top: -50px;
   height: 90vh;
   width: 90vw;
