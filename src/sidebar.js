@@ -5,6 +5,7 @@ import HeadphonesIcon from '@mui/icons-material/Headphones';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import { Avatar, IconButton } from '@mui/material';
 import { SearchOutlined } from '@mui/icons-material';
+import SidebarChat from './SidebarChat';
 function Sidebar() {
   return (
     <div className ='sidebar'>
@@ -28,6 +29,12 @@ function Sidebar() {
           <input placeholder='Search friend here' type='text' />
         </div>
       </div>
+
+      
+      <div className='sidebar_chats'>
+          <SidebarChat/>
+          <SidebarChat/>
+        </div>
     </div>
   )
 }
