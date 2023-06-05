@@ -2,13 +2,14 @@
     display: flex;
     flex-direction: column;
     flex: 0.35;
+    border-right: 1px solid lightgray;
 }
 
 .sidebar_Lower{
     display: flex;
     justify-content: space-between;
     padding: 20px;
-    border-right: 1px solid lightgray;
+    /* border-right: 1px solid lightgray; */
 }
 .sidebar_lower_right{
     display: flex;
@@ -50,6 +51,9 @@
 .sidebar_chats{
     flex: 1;
     background-color: rgb(70, 128, 103);
-    overflow: scroll;
+    overflow: scroll  ;
+
 }
+
+
 

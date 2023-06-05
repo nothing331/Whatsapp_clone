@@ -29,7 +29,6 @@ function Sidebar() {
           <input placeholder='Search friend here' type='text' />
         </div>
       </div>
-
       
       <div className='sidebar_chats'>
           <SidebarChat/>
