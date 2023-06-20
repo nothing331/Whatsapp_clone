@@ -11,7 +11,7 @@ function Chat() {
       <div className='chat_header'>
         <Avatar src ='https://images4.alphacoders.com/122/1228259.png'/>
         <div className='Chat_name'>
-          <h2>Zoro</h2>
+          <h2>Him</h2>
           <p>click for info</p>
         </div>
         <div className='chat_header_right'>
@@ -25,20 +25,20 @@ function Chat() {
       </div>
       <div className='chat_area'>
         <p className='chat_message'>
-          <span className='chater_name'>Zoro</span>
-          this is a message
+          <span className='chater_name'>Him</span>
+          Hey
           <span className='chat_date'>date</span>
         </p>
 
         <p className='chat_message chat_reciever'>
-          <span className='chater_name'>Zoro</span>
-          this is a message
+          <span className='chater_name'>Me</span>
+          What are you doing
           <span className='chat_date'>date</span>
         </p>
 
         <p className='chat_message'>
-          <span className='chater_name'>Zoro</span>
-          this is a message
+          <span className='chater_name'>Him</span>
+            nothing much
           <span className='chat_date'>date</span>
         </p>
       </div>
