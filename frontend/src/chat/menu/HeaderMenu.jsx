@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react';
 import { MoreVert } from '@mui/icons-material'
-import { Menu } from '@mui/material';
+import { Menu, MenuItem } from '@mui/material';
 function HeaderMenu() {
     
     
@@ -11,31 +11,33 @@ function HeaderMenu() {
         setOpen(null);
     }
 
-    const handleClick = () => {
-        setOpen(true);
+    const handleClick = (e) => {
+        setOpen(e.currentTarget);
     }
 
   return (
-    <div>
-      <MoreVert onClick = {handleClick}/>
+    <>
+      <MoreVert onClick={handleClick} />
       <Menu
-                anchorEl={open}
-                keepMounted
-                open={open}
-                onClose={handleClose}
-                getContentAnchorEl={null}
-                anchorOrigin={{
-                    vertical: 'bottom',
-                    horizontal: 'center',
-                }}
-                transformOrigin={{
-                    vertical: 'top',
-                    horizontal: 'right',
-                }}
-            >
+        anchorEl={open}
+        keepMounted
+        open={open}
+        onClose={handleClose}
+        getContentAnchorEl={null}
+        anchorOrigin={{
+          vertical: 'bottom',
+          horizontal: 'center',
+        }}
+        transformOrigin={{
+          vertical: 'top',
+          horizontal: 'right',
+        }}
+      >
+        <MenuItem onClick={handleClose}>Profile</MenuItem>
+        <MenuItem onClick={handleClose}>Logout</MenuItem>
 
-            </Menu>
-    </div>
+      </Menu>
+    </>
   )
 }
 

@@ -45,8 +45,8 @@ function Header() {
       <Component>
         <Image src={account.picture} alt= "dp" />
         <Wraper>
-            <HeaderMenu/>
-            <MessageIcon/>
+          <MessageIcon/>
+          <HeaderMenu/>           
         </Wraper>
       </Component>
      <Search/>
