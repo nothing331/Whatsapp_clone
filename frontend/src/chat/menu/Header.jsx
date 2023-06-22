@@ -5,6 +5,7 @@ import { Chat as MessageIcon} from '@mui/icons-material';
 import { AccountContext } from '../../context/AccountProvider'
 import Search from './Search';
 import HeaderMenu from './HeaderMenu';
+import Conversations from './Conversations';
 //style
 
 const Component = styled(Box)`
@@ -50,8 +51,9 @@ function Header() {
         </Wraper>
       </Component>
      <Search/>
+     <Conversations/>
     </div>
   )
 }
 
-export default Header
+export default Header;
