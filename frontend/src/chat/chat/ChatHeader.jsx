@@ -32,12 +32,12 @@ const RightContainer = styled(Box)`
     }
 `;
 
-function ChatHeader() {
+function ChatHeader({ person }) {
     return (
         <Header>
-            <Image src={'https://lh3.googleusercontent.com/Ryg5ih-fOWbpEGDpbJYJz5RTq3_28Tvo2h3JQRCdiz16lw5ghitDMN6hcWA57g0d6_8VOqQYcCemRBOfZGQA64ZKkFOn71zuF1LDsXwCh4ywF-_z6VqxbBqmbQvK_-PWfZcztxDd1WDTEEUHX6GdP60'} alt="dp" />
+            <Image src={person.picture} alt="dp" />
             <Box>
-                <Name>Name</Name>
+                <Name>{person.name}</Name>
             </Box>
             <RightContainer>
                 <Search />

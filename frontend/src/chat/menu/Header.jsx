@@ -6,6 +6,7 @@ import { AccountContext } from '../../context/AccountProvider'
 import Search from './Search';
 import HeaderMenu from './HeaderMenu';
 import Conversations from './Conversations';
+import { useState } from 'react';
 //style
 
 const Component = styled(Box)`
@@ -38,7 +39,7 @@ const Wraper = styled(Box)`
 
 
 function Header() {
-
+    const [text, setText] = useState('');
     const { account} = useContext(AccountContext);
 
   return (
@@ -50,8 +51,8 @@ function Header() {
           <HeaderMenu/>           
         </Wraper>
       </Component>
-     <Search/>
-     <Conversations/>
+     <Search setText={setText}/>
+     <Conversations text ={text}/>
     </div>
   )
 }

@@ -13,7 +13,7 @@ const Component = styled(Box)`
 `;
 
 
-const Conversations = () => {
+const Conversations = ({ text }) => {
 
     const [user, setUser] = useState([]);
 
@@ -22,10 +22,11 @@ const Conversations = () => {
     useEffect(() => {
         const fetchData = async ()=> {
             let response = await getUser();
-            setUser(response);
+            const filteredData = response.filter(user => user.name.toLowerCase().includes(text.toLowerCase()));
+            setUser(filteredData);
         }
         fetchData();
-    }, []);
+    }, [text]);
 
   return (
     <Component>

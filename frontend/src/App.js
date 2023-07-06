@@ -1,6 +1,5 @@
 import './App.css';
-import Chat from './Chat';
-import Sidebar from './sidebar';
+
 import Login from './login/LoginDialog'
 import { GoogleOAuthProvider } from '@react-oauth/google';
 import AccountProvider from './context/AccountProvider'
@@ -12,14 +11,6 @@ function App() {
     <GoogleOAuthProvider clientId={clientId}>
       <AccountProvider>
       <Login/>
-        <div className="app">
-          <div className='app_body'>
-          <Sidebar />
-          <Chat/>
-          
-          </div>
-          
-        </div>
       </AccountProvider>
     </GoogleOAuthProvider>
   );
