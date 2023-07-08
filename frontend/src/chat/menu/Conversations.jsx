@@ -17,16 +17,26 @@ const Conversations = ({ text }) => {
 
     const [user, setUser] = useState([]);
 
-    const { account } = useContext(AccountContext);
+    const { account, socket, setActiveUsers } = useContext(AccountContext);
+
 
     useEffect(() => {
-        const fetchData = async ()=> {
-            let response = await getUser();
-            const filteredData = response.filter(user => user.name.toLowerCase().includes(text.toLowerCase()));
-            setUser(filteredData);
-        }
-        fetchData();
-    }, [text]);
+      const fetchData = async () => {
+          let data = await getUser();
+          let fiteredData = data.filter(user => user.name.toLowerCase().includes(text.toLowerCase()));
+          setUser(fiteredData);
+      }
+      fetchData();
+  }, [text]);
+
+
+  useEffect(() => {
+    socket.current.emit('addUser', account);
+    socket.current.on("getUsers", users => {
+        setActiveUsers(users);
+    })
+}, [account])
+
 
   return (
     <Component>
